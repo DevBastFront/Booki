@@ -83,7 +83,7 @@ a {
     font-size: 20px;
     color: black;
   }
-  
+  /********** RESPONSIVE SEARCHBAR < 768px **********/
   @media (max-width: 768px) {
     .btn-search {
         display: none;
@@ -96,7 +96,6 @@ a {
         display: flex;
     }
   }
-
 .filter {
     margin-bottom: 52px;
     margin-top: 10px;
