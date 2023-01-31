@@ -137,6 +137,12 @@ a {
     background-color: #DEEBFF;
     opacity: 0.9;
 }
+@media (max-width: 768px) {
+    .elements-filter {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 .info {
     margin-left: 50px;
     margin-bottom: 39px;
