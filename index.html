@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/normalize.css">
     <link href="/CSS/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/40f044529c.js"></script>
@@ -17,19 +18,15 @@
                 <img class="logo" src="images/Booki.png" alt="logo Booki">
             </div>
             <nav class="menu">
-                <li><a href="#1" class="menu-item">Hébergements</a></li>
-                <li><a href="#2" class="menu-item">Activités</a></li>
+                <li><a href="#hebergements" class="menu-item">Hébergements</a></li>
+                <li><a href="#activites-marseille" class="menu-item">Activités</a></li>
             </nav> 
-            <div class="rectangles">
-                <div class="rectangle-26"></div>
-                <div class="rectangle-27"></div>
-            </div>
         </div>                           
     </header>
     <main>
         <section>
             <div class="en-tete">
-                <div>
+                <div class="en-tete-title">
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <h3>En plein centre-ville ou en pleine nature</h3>
                 </div>
@@ -39,7 +36,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                       </button>
                       <input type="text" placeholder="Marseille, France">
-                      <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i><span class="btn-search">Rechercher</span>
+                      <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass" id="glass"></i><span class="btn-search">Rechercher</span>
                       </button>
                     </form>
                 </div>
@@ -53,13 +50,14 @@
                     </div>
                 </div>
                 <div class="info">
-                    <i class="fa-solid fa-circle-info"></i><a href="#">Plus de 500 logements sont disponibles dans cette ville</a>
+                    <i class="fa-solid fa-circle-info"></i>
+                    <a href="#">Plus de 500 logements sont disponibles dans cette ville</a>
                 </div>
             </div>
         </section>
 
         <section class="main">
-            <section class="hebergements">
+            <section class="hebergements" id="hebergements">
                 <h1>Hébergements à Marseille</h1>
                 <div class="cards">
                     <article class="card">
@@ -199,7 +197,7 @@
             </aside>
         </section>
 
-        <section class="activity-marseille">
+        <section class="activity-marseille" id="activites-marseille">
             <h1>Activités à Marseille</h1>
             <div class="activity">
                 <div class="activity-card">

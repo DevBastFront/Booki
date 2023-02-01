@@ -2,13 +2,22 @@
 body {
     max-width: 1400px;
     font-family: 'Raleway';
-    margin-right: 50px;
+    margin-right: auto;
+    margin-left: auto;
 }
 li {
     list-style: none;
 }
 a {
     text-decoration: none;
+    color: black;
+}
+@media screen and (max-width: 768px) {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
 }
 
 /********** EN-TÊTE **********/
@@ -27,16 +36,17 @@ a {
     margin-bottom: 20px;
     margin-top: -15px;
 }
-.fa-magnifying-glass {
+#glass {
     display: none;
 }
+
 .searchbar {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
-    width: 464px;
+    width: auto;
     margin-left: 55px;
+    margin-bottom: 40px;
   }
   
   form {
@@ -83,19 +93,80 @@ a {
     font-size: 20px;
     color: black;
   }
-  /********** RESPONSIVE SEARCHBAR < 768px **********/
-  @media (max-width: 768px) {
+
+  @media screen and (max-width: 768px) {  
+    .en-tete h1 {
+        font-size: 22px;
+    }
+    .en-tete h1, h3 {
+        margin-left: 22px;
+    }
+    .searchbar form {
+        width: 332px;
+        margin: auto;
+    }
+    button[type="submit"] {
+        margin-left: 280px;
+    }    
+}
+
+  /********** HEADER **********/
+.topbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content:space-between;
+    padding-left: 55px;
+}
+.logo {
+    width: 61.09px;
+    height: 19px;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.menu li{
+    padding-top: 42px;
+    border-top: 2px solid white;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+.menu li:hover{
+    border-top: 2px solid #0065FC;
+}
+.menu-item {
+    text-decoration: none;
+    height: 19px;
+    color: black;
+}
+.menu-item:hover {
+    color: #0065FC;
+}
+/********** RESPONSIVE SEARCHBAR < 768px **********/
+@media (max-width: 768px) {
+    .topbar {
+        display: block;
+        padding-left: 0;
+    }
+    .topbar>div{
+        padding-top: 44px;
+    }
     .btn-search {
         display: none;
     }
     .searchbar {
         margin: 0;
         align-items: center;
+        width: auto;
     }
     .fa-magnifying-glass {
         display: flex;
     }
-  }
+}
+
+
+
 .filter {
     margin-bottom: 52px;
     margin-top: 10px;
@@ -126,10 +197,11 @@ a {
     height: 22px;
 }
 .btn-filter {
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
+    height: 50px;
     font-weight: 700;
     font-size: 17px;
-    border-radius: 20px;
+    border-radius: 50px;
     border: 1px solid #F2F2F2;
     background-color: #FFFFFF;
 }
@@ -149,27 +221,6 @@ a {
 }
 .info a {
     margin-left: 11px;
-}
-
-/********** HEADER **********/
-.logo {
-    width: 61.09px;
-    height: 19px;
-    margin-left: 55px;
-    margin-top: 44px;
-}
-.menu {
-    display: flex;
-    justify-content: flex-end;
-    gap: 67px;
-}
-.menu-item {
-    text-decoration: none;
-    height: 19px;
-    color: black;
-    margin-right: 27px;
-}
-.menu-item:active {
     color: #0065FC;
 }
 /********** RESPONSIVE HEADER < 768px **********/
@@ -178,46 +229,51 @@ a {
         margin: 0;
         max-width: 100%;
     }
+    h1 {
+        font-size: 22px;
+    }
     .menu {
         display: flex;
         justify-content: center;
-        margin-top: 48.56px;
+        gap: 0;
       }
+    .menu li{
+        padding-top: 48.56px;
+        border-top: 0;
+        border-bottom: 3px solid #F2F2F2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    }
+    .menu li:hover{
+        border-top: 0;
+        border-bottom: 3px solid #0065FC;
+
+    }
     .menu-item {
         width: 50%;
+        margin-right: 0;
     }  
     .logo {
         display: block;
         width: 61.09px;
         margin: auto;
     }
-    .rectangles {
-        display: flex;
-    }
-    .rectangle-26 {        
-        width: 50%;
-        height: 3px;
-        left: 0px;
-        margin-top: 23.09px;
-        background: #0065FC;
-    }
-    .rectangle-27 {
-        width: 50%;
-        height: 3px;
-        left: 187px;
-        margin-top: 23.09px;
-        background: #F2F2F2;
-    }
     .elements-filter {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: auto;
     }
     .info {
         margin-left: 20px;
         width: 330px;
         height: 57px;
-
+        text-align: justify;
+    }
+    .info a {
+        color: #0065FC;       
     }
 
 }
@@ -367,23 +423,31 @@ a {
         margin: 0;
         width: 100%;
         border-radius: 0px;
+        padding-right: 0;
     }
     .sidebar h1 {
         margin-left: 20px;
     }
+    .fa-chart-line {
+        margin-left: 118px;
+    }
     .populaires-cards {
-        width: 100%;
+        width: auto;
         margin-left: 37px;
     }
     .hebergements {
         border-radius: 0px;
         background-color: #FFFFFF;
-        width: 100%;
-        margin-left: 20px;
+        width: auto;
+        margin: 0;
     }
-
     .more-info {
         display: none;
+    }
+    .cards {
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
     .card {
         width: 335px;
@@ -411,6 +475,7 @@ a {
 }
 .activity-marseille h1 {
     margin-left: 50px;
+    width: auto;
 }
 .activity-card {
     width: 302px;
@@ -438,13 +503,13 @@ a {
 /********** RESPONSIVE ACTIVITES A MARSEILLE < 768px **********/
 @media screen and (max-width: 768px) {
     .activity-marseille h1 {
-        width: 212px;
+        width: 210px;
         margin-top: 105px;
         margin-bottom: 0;
     }
     .activity {
         display: inline-block;
-        width: 100%;        
+        width: auto;        
     }
     .activity-card {
         width: 334px;
