@@ -1,4 +1,3 @@
-/********** GENERAL **********/
 body {
     max-width: 1400px;
     font-family: 'Raleway';
@@ -12,16 +11,6 @@ a {
     text-decoration: none;
     color: black;
 }
-/********** RESPONSIVE GENERAL **********/
-@media screen and (max-width: 768px) {
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    
-}
-
-/********** HEADER **********/
 .topbar {
     display: flex;
     align-items: flex-end;
@@ -54,54 +43,13 @@ a {
 .menu-item:hover {
     color: #0065FC;
 }
-/********** RESPONSIVE HEADER < 768px **********/
-@media screen and (max-width: 768px) {
-    .topbar {
-        display: block;
-        padding-left: 0;
-    }
-    .topbar>div{
-        padding-top: 44px;
-    }
-    .menu {
-        display: flex;
-        justify-content: center;
-        gap: 0;
-      }
-    .menu li{
-        padding-top: 48.56px;
-        border-top: 0;
-        border-bottom: 3px solid #F2F2F2;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-    }
-    .menu li:hover{
-        border-top: 0;
-        border-bottom: 3px solid #0065FC;
-
-    }
-    .menu-item {
-        width: 50%;
-        margin-right: 0;
-    }  
-    .logo {
-        display: block;
-        width: 61.09px;
-        margin: auto;
-    }
-}
-
-/********** EN-TÊTE **********/
 .en-tete {
     max-width: 1400px;
 }
 .en-tete h1, h3, .searchbar {
     margin-left: 55px;
 }
-.en-tete h1 {
+.en-tete-title h1 {
     margin-top: 59px;
 }
 .en-tete h3 {
@@ -137,61 +85,40 @@ input[type="text"] {
     margin-left: 10px;
     text-align: center;
     font-weight: 700;
+    height: 27px;
 } 
+input[type="text"]::placeholder {
+    color: black;
+}
 button[type="submit"] {
     padding: 10px 20px;
     border: 1px solid #0065FC;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 10px 10px 0;
     font-size: 16px;
     position: absolute;
     margin-left: 210px;
     background-color: #0065FC;
     color: #FFFFFF;
+    height: 49px;
+
 } 
+.btn-search {
+    font-weight: bold;
+}
 .location-btn {
     background-color: #F2F2F2;
     position: absolute;
     border: none;
     padding: 10px;
     width: 50px;
-    height: 49;
-    border-radius: 20px 0px 0px 20px;
+    height: 49px;
+    border-radius: 10px 0px 0px 10px;
 
 }  
 .location-btn i {
     font-size: 20px;
     color: black;
 }
-/********** RESPONSIVE EN-TÊTE **********/
-  @media screen and (max-width: 768px) {  
-    .en-tete h1 {
-        font-size: 22px;
-    }
-    .en-tete h1, h3 {
-        margin-left: 22px;
-    }
-    .searchbar {
-        margin: 0;
-        align-items: center;
-        width: auto;
-    }
-    .searchbar form {
-        width: 332px;
-        margin: auto;
-    }
-    .btn-search {
-        display: none;
-    }
-
-    button[type="submit"] {
-        margin-left: 280px;
-    }
-    #glass {
-        display: flex;
-    }    
-}
-
-/********** FILTRES **********/
 .filter {
     display: flex;
     align-items: baseline;
@@ -230,76 +157,43 @@ button[type="submit"] {
     font-weight: 700;
     font-size: 17px;
     border-radius: 50px;
-    border: 1px solid #F2F2F2;
+    border: 1px solid #D9D9D9;
     background-color: #FFFFFF;
+    padding-right: 14px;
+    cursor: pointer;
 }
 .btn-filter:hover {
     background-color: #DEEBFF;
     opacity: 0.9;
 }
+.btn-filter i {
+    padding-left: 8px;
+    padding-right: 8px;
+}
 .info {
     display: flex;
     margin-left: 59px;
     margin-bottom: 37px;
+    align-items: flex-start;
+}
+.info-logo {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #d9d9d9;
+    border-radius: 50%;
+
+}
+.info-logo i {
+    width: 4px;
+    height: 10px;
+    margin-left: 9px ;
+    margin-top: 3px;
 }
 .info-text {
+    padding-top: 4px;
     margin-left: 11px;
     color: black;
 }
-/********** RESPONSIVE FILTRES **********/
-@media (max-width: 768px) {
-    .filter {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 20px;
-    }
-    .elements-filter {
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;
-        width: auto;
-    }
-    .btn-filter {
-        width: 160px;
-        height: 50px;
-        font-size: 13px;
-        text-align: start;
-        font-weight: 700;
-        border: 2px solid #D9D9D9;
-        border-radius: 25px;
-    }
-    .fa-money-bill-wave {
-        color: #0065FC;
-        width: 21px;
-        height: 14.78px;
-    }
-    .fa-person {
-        color: #0065FC;
-        width: 13px;
-        height: 22px;
-    }
-    .fa-heart {
-        width: 22px;
-        height: 18px;
-    }
-    .fa-dog {
-        color: #0065FC;
-        width: 21px;
-        height: 20px;    
-    }
-    .info {
-        margin-left: 20px;
-        width: 330px;
-        height: 57px;
-    }
-    .info-text {
-        color: black;
-        width: 298px;
-        text-align: justify; 
-    }
-}
-
-/********** HEBERGEMENTS A MARSEILLE **********/
 .main {
     display: flex;
     width: 100%;
@@ -352,12 +246,16 @@ button[type="submit"] {
 .price-card {
     font-size: 14px;
 }
-.rating-card .checked, .populaires-rating-card .checked,  .fa-chart-line, .fa-circle-info {
+.devise {
+    font-weight: bold;
+}
+.rating-card .checked, .populaires-rating-card .checked,  .fa-chart-line, .fa-info {
     color: #0065FC;
 
 }
-
-/********** AFFICHEZ PLUS **********/
+.fa-star {
+    color: #F2F2F2;
+}
 .more-info {
     font-size: 18px;
     font-weight: 700;
@@ -365,8 +263,6 @@ button[type="submit"] {
     margin-left: 44px;
     padding-bottom: 46px;   
 }
-
-/********** SIDEBAR **********/
 .sidebar {
     flex: none;
     width: 420px;
@@ -384,7 +280,6 @@ button[type="submit"] {
     margin-left: 150px;
 }
 .sidebar-cards {
-    max-width: 345px;
     display: flex;
     flex-direction: column;
     padding-top: 23px;
@@ -428,64 +323,9 @@ button[type="submit"] {
 .populaires-rating-card {
     margin-top: 45px;
 }
-/********** RESPONSIVE CONTENU < 768px **********/
-@media screen and (max-width: 768px) {
-    .main {
-        flex: inline-block;
-        flex-wrap: wrap-reverse;
-        width: 100%;
-
-    }
-    .sidebar {
-        margin: 0;
-        width: 100%;
-        border-radius: 0px;
-        padding-right: 0;
-    }
-    .sidebar h1 {
-        margin-left: 20px;
-    }
-    .fa-chart-line {
-        margin-left: 118px;
-    }
-    .sidebar-cards {
-        width: auto;
-        margin-left: 20px;
-    }
-    .hebergements {
-        border-radius: 0px;
-        background-color: #FFFFFF;
-        width: auto;
-        margin: 0;
-    }
-    .more-info {
-        display: none;
-    }
-    .cards {
-        padding-right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .card {
-        width: 335px;
-        height: 199px;
-        box-shadow: 0px 5px 20px #999;
-    }
-    .image-card {
-        height: 124px;
-    }
-    .body-card {
-        height: 15px;
-        line-height: 5px;
-    }
-    .body-card h2 {
-        margin-top: 15px;
-    }
-}  
-
-/********** ACTIVITES A MARSEILLE **********/
 .activity {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 50px;
     max-width: 100%;
@@ -517,35 +357,6 @@ button[type="submit"] {
     margin-left: 20px;
 
 }
-/********** RESPONSIVE ACTIVITES A MARSEILLE < 768px **********/
-@media screen and (max-width: 768px) {
-    .activity-marseille h1 {
-        width: 210px;
-        margin-top: 105px;
-        margin-bottom: 0;
-    }
-    .activity {
-        display: inline-block;
-        width: auto;  
-        align-items: center;
-        margin-left: 19px;     
-    }
-    .activity-card {
-        width: 334px;
-        height: 190px;
-        margin-top: 24px;
-    }
-    .activity-card-image {
-        height: 154px;
-    }
-    .activity-card-image img {
-        width: 100%;/*4*/
-        height: 100%;
-    }
-    
-}
-
-/********** FOOTER **********/
 .footer li {
     padding-top: 12px;
 }
@@ -559,26 +370,17 @@ button[type="submit"] {
     justify-content: space-around;
     background-color: #F2F2F2; 
     margin-top: 61px;
-    margin-left: 48px;
     padding-bottom: 58px;
+    padding-right: 327px;
 }
-/********** RESPONSIVE FOOTER < 768px **********/
-@media screen and (max-width: 768px) {
-    .footer {
-        display: block;
-        margin: 0;
-        background: #F2F2F2;       
-    }
-    .footer ul {
-        padding-left: 29px;
-    }
-    
-}
-
 /********** RESPONSIVE TABLETTE **********/
 @media screen and (min-width:768px) and (max-width: 992px) {
     .searchbar input {
         padding-left: 20px;
+    }
+    .btn-filter {
+        font-size: 11px;
+        padding-top: 8px;
     }
     .info {
         margin-left: 72px;
@@ -602,7 +404,8 @@ button[type="submit"] {
     .sidebar-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;     
+        justify-content: space-between;  
+        flex-wrap: wrap;   
     }
     .populaires-card {
         width: 252px;
@@ -669,7 +472,203 @@ button[type="submit"] {
     }
     
 }
+/********** RESPONSIVE MOBILE **********/
+@media screen and (max-width: 768px) {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .topbar {
+        display: block;
+        padding-left: 0;
+    }
+    .topbar>div{
+        padding-top: 44px;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+    }
+    .menu li{
+        padding-top: 48.56px;
+        border-top: 0;
+        border-bottom: 3px solid #F2F2F2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    }
+    .menu li:hover{
+        border-top: 0;
+        border-bottom: 3px solid #0065FC;
 
-/* * {
-    outline: 1px solid red;
-} */
+    }
+    .menu-item {
+        width: 50%;
+        margin-right: 0;
+    }  
+    .logo {
+        display: block;
+        width: 61.09px;
+        margin: auto;
+    }
+    .en-tete h1 {
+        font-size: 22px;
+    }
+    .en-tete h1, h3 {
+        margin-left: 22px;
+    }
+    .searchbar {
+        margin: 0;
+        align-items: center;
+        width: auto;
+    }
+    .searchbar form {
+        width: 332px;
+        margin: auto;
+    }
+    .btn-search {
+        display: none;
+    }
+
+    button[type="submit"] {
+        margin-left: 280px;
+    }
+    #glass {
+        display: flex;
+    }  
+    .filter {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 20px;
+    }
+    .elements-filter {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: auto;
+    }
+    .btn-filter {
+        width: 145px;
+        height: 50px;
+        font-size: 9px;
+        text-align: start;
+        font-weight: bold;
+        border: 2px solid #D9D9D9;
+        border-radius: 25px;
+    }
+    .fa-money-bill-wave {
+        color: #0065FC;
+        width: 21px;
+        height: 14.78px;
+    }
+    .fa-person {
+        color: #0065FC;
+        width: 13px;
+        height: 22px;
+    }
+    .fa-heart {
+        width: 22px;
+        height: 18px;
+    }
+    .fa-dog {
+        color: #0065FC;
+        width: 21px;
+        height: 20px;    
+    }
+    .info {
+        margin-left: 20px;
+        width: 330px;
+        height: 57px;
+    }
+    .info-text {
+        color: black;
+        width: 298px;
+        text-align: justify; 
+    }
+    .main {
+        flex: inline-block;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+
+    }
+    .sidebar {
+        margin: 0;
+        width: 100%;
+        border-radius: 0px;
+        padding-right: 0;
+    }
+    .sidebar h1 {
+        margin-left: 20px;
+    }
+    .fa-chart-line {
+        margin-left: 118px;
+    }
+    .sidebar-cards {
+        width: auto;
+        margin-left: 20px;
+    }
+    .hebergements {
+        border-radius: 0px;
+        background-color: #FFFFFF;
+        width: auto;
+        margin: 0;
+    }
+    .more-info {
+        display: none;
+    }
+    .cards {
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        width: 335px;
+        height: 199px;
+        box-shadow: 0px 5px 20px #999;
+    }
+    .image-card {
+        height: 124px;
+    }
+    .body-card {
+        height: 15px;
+        line-height: 5px;
+    }
+    .body-card h2 {
+        margin-top: 15px;
+    }
+    .activity-marseille h1 {
+        width: 210px;
+        margin-top: 105px;
+        margin-bottom: 0;
+    }
+    .activity {
+        display: inline-block;
+        width: auto;  
+        align-items: center;
+        margin-left: 19px;     
+    }
+    .activity-card {
+        width: 334px;
+        height: 190px;
+        margin-top: 24px;
+    }
+    .activity-card-image {
+        height: 154px;
+    }
+    .activity-card-image img {
+        width: 100%;/*4*/
+        height: 100%;
+    }
+    .footer {
+        display: block;
+        padding-right: 0;
+        background: #F2F2F2;       
+    }
+    .footer ul {
+        padding-left: 29px;
+    }    
+}
+
