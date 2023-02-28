@@ -676,3 +676,7 @@ button[type="submit"] {
         padding-left: 29px;
     }    
 }
+
+*{
+    outline: 1px solid red;
+}
