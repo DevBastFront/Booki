@@ -4,7 +4,7 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
-li {
+ul {
     list-style: none;
 }
 a {
@@ -25,14 +25,14 @@ a {
     display: flex;
     justify-content: flex-end;
 }
-.menu li{
+.menu a{
     padding-top: 42px;
     border-top: 2px solid white;
     width: 150px;
     display: flex;
     justify-content: center;
 }
-.menu li:hover{
+.menu a:hover{
     border-top: 2px solid #0065FC;
 }
 .menu-item {
@@ -46,10 +46,10 @@ a {
 .en-tete {
     max-width: 1400px;
 }
-.en-tete h1, h3, .searchbar {
+.en-tete h2, h3, .searchbar {
     margin-left: 55px;
 }
-.en-tete-title h1 {
+.en-tete-title h2 {
     margin-top: 59px;
 }
 .en-tete h3 {
@@ -125,7 +125,7 @@ button[type="submit"] {
     margin-bottom: 52px;
     margin-top: 10px;
 }
-.filter h1 {
+.filter h2 {
     width: 54px;
     height: 21px;
     font-weight: 700;
@@ -204,7 +204,7 @@ button[type="submit"] {
     border-radius: 20px;
     background: #F2F2F2;
 }
-.hebergements h1 {
+.hebergements h2 {
     margin-left: 40px;
     margin-top: 42px;
 }
@@ -239,9 +239,12 @@ button[type="submit"] {
 .body-card {
     margin-left: 16px;
     font-size: 16px;
+    line-height: 9px;
 }
 .title-card h2 {
     font-size: 16px;
+    margin-left: 0;
+    margin-top: 8px;
 }
 .price-card {
     font-size: 14px;
@@ -249,7 +252,7 @@ button[type="submit"] {
 .devise {
     font-weight: bold;
 }
-.rating-card .checked, .populaires-rating-card .checked,  .fa-chart-line, .fa-info {
+.rating-card .checked, .populars-rating-card .checked,  .fa-chart-line, .fa-info {
     color: #0065FC;
 
 }
@@ -271,13 +274,13 @@ button[type="submit"] {
     margin-left: 30px;
     padding-right: 20px;
 }
-.sidebar h1 {
+.sidebar h2 {
     margin-left: 37px;
     padding-top: 30px;
     margin-bottom: 0px;
 }
 .fa-chart-line {
-    margin-left: 150px;
+    margin-left: 80px;
 }
 .sidebar-cards {
     display: flex;
@@ -289,38 +292,39 @@ button[type="submit"] {
     margin-left: 40px;
     padding-right: 40px;
 }
-.populaires-card {
+.populars-card {
     width: 320px;
     height: 144px;
     background-color: #FFFFFF;
     margin: auto;
-    border: 5px solid white;
+    border: 5px solid #FFFFFF;
     border-radius: 20px;
 }
-.populaires-img-card {
+.populars-img-card {
     box-sizing: border-box;
     height: 144px;
     position: absolute;
     border-radius: 20px 0px 0px 20px;
 }
-.populaires-img-card img {
+.populars-img-card img {
     position: absolute;
     width: 137px;
     height: 144px;    
     border-radius: 20px 0px 0px 20px;
 }
-.populaires-body-card {
+.populars-body-card {
     margin-left: 150px;
     height: 144px;
 }
-.populaires-title-card h2 {
+.populars-title-card h3 {
     font-size: 16px;
+    margin-left: 0;
 }
-.populaires-price-card {
+.populars-price-card {
     font-size: 14px;
     margin-top: 7px;
 }
-.populaires-rating-card {
+.populars-rating-card {
     margin-top: 45px;
 }
 .activity {
@@ -330,7 +334,7 @@ button[type="submit"] {
     margin-left: 50px;
     max-width: 100%;
 }
-.activity-marseille h1 {
+.activity-marseille h2 {
     margin-left: 50px;
     width: auto;
 }
@@ -407,16 +411,16 @@ button[type="submit"] {
         justify-content: space-between;  
         flex-wrap: wrap;   
     }
-    .populaires-card {
+    .populars-card {
         width: 252px;
         height: 144px;
         margin-left: 40px;
     }
-    .populaires-img-card img {
+    .populars-img-card img {
         width: 106px;
         height: 144px;
     }
-    .populaires-body-card {
+    .populars-body-card {
         width: 146px;
         margin-left: 110px;
     }
@@ -429,7 +433,7 @@ button[type="submit"] {
     .card {
         width: 246px;
         height: 199px;
-        box-shadow: 0px 5px 20px #999;
+        
     }
     .image-card {
         height: 124px;
@@ -514,10 +518,10 @@ button[type="submit"] {
         width: 61.09px;
         margin: auto;
     }
-    .en-tete h1 {
+    .en-tete h2 {
         font-size: 22px;
     }
-    .en-tete h1, h3 {
+    .en-tete h2, h3 {
         margin-left: 22px;
     }
     .searchbar {
@@ -551,9 +555,9 @@ button[type="submit"] {
         width: auto;
     }
     .btn-filter {
-        width: 145px;
-        height: 50px;
-        font-size: 9px;
+        width: 170px;
+        height: 60px;
+        font-size: 12px;
         text-align: start;
         font-weight: bold;
         border: 2px solid #D9D9D9;
@@ -589,7 +593,6 @@ button[type="submit"] {
         text-align: justify; 
     }
     .main {
-        flex: inline-block;
         flex-wrap: wrap-reverse;
         width: 100%;
 
@@ -600,7 +603,7 @@ button[type="submit"] {
         border-radius: 0px;
         padding-right: 0;
     }
-    .sidebar h1 {
+    .sidebar h2 {
         margin-left: 20px;
     }
     .fa-chart-line {
@@ -639,15 +642,17 @@ button[type="submit"] {
     .body-card h2 {
         margin-top: 15px;
     }
-    .activity-marseille h1 {
-        width: 210px;
+    .activity-marseille {
+        margin-left: 50px;
+    }
+    .activity-marseille h2 {
+        width: 250px;
         margin-top: 105px;
         margin-bottom: 0;
     }
     .activity {
         display: inline-block;
         width: auto;  
-        align-items: center;
         margin-left: 19px;     
     }
     .activity-card {
@@ -671,4 +676,3 @@ button[type="submit"] {
         padding-left: 29px;
     }    
 }
-
